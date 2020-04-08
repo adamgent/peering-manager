@@ -1,5 +1,5 @@
 ```no-highlight
-router bgp 8757
+router bgp {{ my_asn }}
         {%- for internet_exchange in internet_exchanges %}
         {%- for address_family, sessions in internet_exchange.sessions.items() %}
         {%- if sessions|length > 0 %}
